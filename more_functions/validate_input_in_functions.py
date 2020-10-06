@@ -19,8 +19,11 @@ def score_input(test_name, test_score = 0, invalid_message = 'Invalid test score
     :return: formatted string with test name and test score.
     :rtype: String
     """
-    # print("{}: {}".format(test_name, test_score))
-    return "{}: {}".format(test_name, test_score)
+    if 0 <= test_score <= 100:
+        # print("{}: {}".format(test_name, test_score))
+        return "{}: {}".format(test_name, test_score)
+    else:
+        return invalid_message
 
 
 if __name__ == '__main__':
